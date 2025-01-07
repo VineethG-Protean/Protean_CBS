@@ -25340,7 +25340,8 @@ var FI_TYPES = {
   L: "LIFE_INSURANCE",
   A: "AIF",
   INV: "INVIT",
-  C: "CP",
+  CP: "CP",
+  C: "CIS",
   DE: "DEBENTURES",
   REI: "REIT",
   G: "GENERAL_INSURANCE",
@@ -25366,6 +25367,7 @@ function generateAccountData(fiType, registeredMobileNumber, firstName, lastName
 var ROU = (0, import_express.default)();
 ROU.post("/Accounts/discover", (req, res) => {
   const { identifiers, fiTypes } = req.body;
+  console.log(fiTypes);
   if (!identifiers || !fiTypes)
     res.status(422).json({ message: "Some parameters are missing" });
   let MOBILE;

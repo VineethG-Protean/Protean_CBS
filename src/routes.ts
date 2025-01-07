@@ -6,6 +6,7 @@ const ROU: Express = express();
 
 ROU.post("/Accounts/discover", (req: Request, res: Response) => {
   const { identifiers, fiTypes } = req.body;
+  console.log(fiTypes);
   if (!identifiers || !fiTypes)
     res.status(422).json({ message: "Some parameters are missing" });
 
