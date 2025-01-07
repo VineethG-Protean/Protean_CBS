@@ -24,7 +24,7 @@ const FI_TYPES: { [key: string]: string } = {
 };
 
 export function getFiXML(fiType: string) {
-  return XML[fiType + "_XML"];
+  return XML[fiType];
 }
 
 export function generateAccountData(
