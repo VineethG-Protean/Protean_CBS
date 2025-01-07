@@ -34,11 +34,13 @@ ROU.post("/Accounts/discover", (req: Request, res: Response) => {
 
 ROU.post("/FI/fetch", (req: Request, res: Response) => {
   const { fiType } = req.body;
-
+  const data = getFiXML(fiType).trim();
+  console.log(getFiXML);
   res.status(200).json({
     status: "S",
     message: "Data Fetched Successfully",
-    data: getFiXML(fiType).trim(),
+    uniqueIdentifier: faker.string.alphanumeric(10),
+    data,
   });
 });
 

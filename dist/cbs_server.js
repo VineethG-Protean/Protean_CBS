@@ -25391,10 +25391,13 @@ ROU.post("/Accounts/discover", (req, res) => {
 });
 ROU.post("/FI/fetch", (req, res) => {
   const { fiType } = req.body;
+  const data = getFiXML(fiType).trim();
+  console.log(getFiXML);
   res.status(200).json({
     status: "S",
     message: "Data Fetched Successfully",
-    data: getFiXML(fiType).trim()
+    uniqueIdentifier: f2.string.alphanumeric(10),
+    data
   });
 });
 var routes_default = ROU;
@@ -25406,7 +25409,8 @@ app.use((0, import_morgan.default)("dev"));
 app.use(import_express2.default.json());
 app.use((0, import_cors.default)());
 app.listen(PORT, () => {
-  console.log(`\u26A1 Server is up and running at ${PORT}`);
+  console.log(`\u26A1 Server is up and running at ${PORT} 
+ CBS is active at http://localhost:3001/api/cbs`);
 });
 app.use("/api/cbs", routes_default);
 /*! Bundled license information:
