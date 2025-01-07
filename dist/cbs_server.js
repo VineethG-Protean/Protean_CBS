@@ -25392,7 +25392,7 @@ ROU.post("/Accounts/discover", (req, res) => {
 ROU.post("/FI/fetch", (req, res) => {
   const { fiType } = req.body;
   const data = getFiXML(fiType).trim();
-  console.log(getFiXML);
+  console.log(data);
   res.status(200).json({
     status: "S",
     message: "Data Fetched Successfully",
