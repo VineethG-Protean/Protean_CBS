@@ -25321,8 +25321,28 @@ var XML = {
 `,
   LIFE_INSURANCE: `<Account xmlns="http://api.rebit.org.in/FISchema/life_insurance" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://api.rebit.org.in/FISchema/life_insurance ../FISchema/life_insurance.xsd" type="life_insurance" linkedAccRef="linkedAccRef1" version="1.0.0" maskedPolicyNumber="XXXXXXX098"><Profile><Holders><Holder name="abc"/></Holders></Profile><Summary sumAssured="200000" premiumAmount="10000" policyType="RETIREMENT" premiumFrequency="ANNUALLY" premiumPaymentYears="20" policyStatus="ACTIVE" policyLoanStatus="NOT_OPTED" tenureYears="20" assignment="NO" currentValue="100000" surrenderValue="100000" exclusions="exclusion details"></Summary></Account>
 `,
-  GENERAL_INSURANCE: `<Accountxmlns="http://api.rebit.org.in/FISchema/general_insurance"xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://api.rebit.org.in/FISchema/general_insurance../FISchema/general_insurance.xsd"type="general_insurance"linkedAccRef="linkedAccRef1"version="1.0.0"maskedPolicyNumber="XXXXXXX098"><Profile><Holders><Holdername="abc"/></Holders></Profile><SummarypolicyName="SupremeHealth"uinNumber="CHAHLIP22184V062192"policyNumber="1234567890"policyDescription="Thisplanoffershealthinsuranceservicestoindividualcustomers."sumAssured="200000"tenureMonths="36"premiumAmount="5000"policyStartDate="2023-04-12"policyExpiryDate="2026-04-12"policyType="FIXED_BENEFIT"insuranceType="HEALTH"premiumFrequency="ANNUALLY"premiumPaymentYears="3"nextPremiumDueDate="2024-04-12"policyStatus="ACTIVE"><Covers><CoveruinNumber="CHIHLIP22184V062154"coverName="AnnualHealthCheck-up"sumAssured="10000"sumInsured="0"tenureYears="3"premiumAmount="1000"coverStartDate="2023-04-12"coverEndDate="2026-04-12"coverDescription="RiderToCoverAnnualHealthCheckup."tenureMonths="36"/></Covers><Vehicles><VehicleregistrationNumber="KA-32-2134"make="Ferrari"model="Red"mfgYear="1992"rtoLocation="Mumbai"ncbPercentage="20"hypothecation="true"financerName="Vineeth"/></Vehicles></Summary><TransactionsstartDate="2023-04-01"endDate="2023-05-31"><TransactiontxnId="a3c722ac4d99cdr4"txnDate="2023-04-12"amount="6000"narration="narration1"type="PREMIUM_PAYMENT"/></Transactions></Account>
-`
+  GENERAL_INSURANCE: `
+<Account
+	xmlns="http://api.rebit.org.in/FISchema/general_insurance"
+	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://api.rebit.org.in/FISchema/general_insurance ../FISchema/general_insurance.xsd" type="general_insurance" linkedAccRef="linkedAccRef1" version="1.0.0" maskedPolicyNumber="XXXXXXX098">
+<Profile>
+<Holders>
+<Holder name="abc"/>
+</Holders>
+</Profile>
+<Summary policyName="Supreme Health" uinNumber="CHAHLIP22184V062192" policyNumber="1234567890" policyDescription="This plan offers health insurance services to individual customers." sumAssured="200000" tenureMonths="36" premiumAmount="5000" policyStartDate="2023-04-12" policyExpiryDate="2026-04-12" policyType="FIXED_BENEFIT" insuranceType="HEALTH" premiumFrequency="ANNUALLY" premiumPaymentYears="3" nextPremiumDueDate="2024-04-12" policyStatus="ACTIVE">
+<Covers>
+<Cover uinNumber="CHIHLIP22184V062154" coverName="Annual Health Check-up" sumAssured="10000" sumInsured="0" tenureYears="3" premiumAmount="1000" coverStartDate="2023-04-12" coverEndDate="2026-04-12" coverDescription="Rider To Cover Annual Health Checkup." tenureMonths="36"/>
+</Covers>
+<Vehicles>
+<Vehicle registrationNumber="KA-32-2134" make="Ferrari" model="Red" mfgYear="1992" rtoLocation="Mumbai" ncbPercentage="20" hypothecation="true" financerName="Vineeth"/>
+</Vehicles>
+</Summary>
+<Transactions startDate="2023-04-01" endDate="2023-05-31">
+<Transaction txnId="a3c722ac4d99cdr4" txnDate="2023-04-12" amount="6000" narration="narration1" type="PREMIUM_PAYMENT"/>
+</Transactions>
+</Account>`
 };
 
 // src/utils.ts
