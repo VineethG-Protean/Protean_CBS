@@ -6,5 +6,5 @@ esbuild.build({
   bundle: true,
   platform: 'node',
   target: 'node18',
-  external: ['express'],
+  external: [],
 }).catch(() => process.exit(1));
